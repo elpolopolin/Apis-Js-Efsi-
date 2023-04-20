@@ -1,0 +1,10 @@
+body {
+    background-image: url("fondo.jpg");
+    
+ 
+}
+.centerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -48,11 +48,13 @@ function CargarPokemones() {
         const img = result.data.sprites.front_default;
         const types = result.data.types;
         const Nombre = result.data.name;
-       
-            document.querySelector("#info").innerHTML += `
+        const xp = result.data.base_experience;
+        console.log(xp);
+       if (xp > 100) {
+        document.querySelector("#info").innerHTML += `
      
-            <div class="card col-3">
-            <img src="${img}" class="card-img-top" alt="...">
+            <div class="card col-3 a" >
+            <img src="${img}" class="card-img-top menem" alt="...">
             <div class="card-body">
               <h5 class="card-title">Nombre: ${Nombre} </h5>
               <h5 class="card-text">Altura: ${height} </h5>
@@ -65,6 +67,26 @@ function CargarPokemones() {
           </div>
             
              `;
+       }
+       else {
+        document.querySelector("#info").innerHTML += `
+     
+        <div class="card col-3 a" >
+        <img src="${img}" class="card-img-top yemen" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nombre: ${Nombre} </h5>
+          <h5 class="card-text">Altura: ${height} </h5>
+          <h5 class="card-text">Ancho: ${weight} </h5>
+          <h5 class="card-text"> <div id="p">Tipo: </div> </h5>
+          
+         
+          <a href="#" onclick="CargarPokemones()" class="btn btn-primary">Regresar</a>
+        </div>
+      </div>
+        
+         `;
+       }
+            
 
              types.map((tipo) => {
 

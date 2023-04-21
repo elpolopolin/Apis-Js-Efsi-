@@ -8,3 +8,18 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.yemen {
+    background-image: url("FondoPokemonDia.jpg");
+}
+
+.menem {
+    background-image: url("FondoPokemon.jpg");
+}
+
+.a {
+    border-radius: 2 2;
+    border-color: black;
+    border-style: dashed;
+}
+
